@@ -4996,11 +4996,14 @@ span.fill {
 
 .project-area.one .project-thumb img {
     width: 100%;
+    height: auto; /* Ensures aspect ratio is maintained */
+    object-fit: cover;
 }
 
 .project-area.one .project-thumb.upper img {
     height: 239px;
-    width: 412px;
+    max-width: 100%; /* Makes it responsive */
+    object-fit: cover; /* Prevents distortion */
 }
 
 .project-area.one .project-content {
@@ -5675,7 +5678,7 @@ span.fill {
 .contact-area-inner {
     background: #161616;
     padding: 0 0 120px;
-    background: url(../images/resource/world.jpg);
+    background:  #161616;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -6355,7 +6358,7 @@ span.fill {
 <!-- ============================================================== -->*/
 
 .testimonial-area.one {
-    background: url(../images/testimonial/test-bg.jpg);
+    background: url(../images/exterior/bedroom1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -8652,6 +8655,8 @@ input.src-input-box::placeholder {
 
 .portfolio-masonary-area .single-portfolio-thumn img {
     width: 100%;
+    object-fit: cover;
+    height: 100%;
 }
 
 .portfolio-masonary-area .portfolio-masonary-content {
