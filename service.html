@@ -40,10 +40,16 @@
 
 	<!-- modernizr js -->
 	<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+	<style>
+		html, body {
+			height: 100%;
+			overflow-y: auto;
+			overflow-x: hidden;
+		}
+	</style>
 </head>
 
 <body>
-
 
 	<!-- loder -->
 	 <div class="loader-wrapper">
@@ -306,22 +312,23 @@
 	<!-- Start breadcumb-area -->
 	<!--==================================================-->
 
-	<div class="breadcumb-area d-flex align-items-center">
+	<div class="breadcumb-area d-flex align-items-center" style="background: url('assets/images/exterior/IMG-20250303-WA0087.jpg') no-repeat center center/cover;">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="breadcumb-content">
-						<h1>Services</h1>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>Services </li>
-						</ul>
+					<div class="breadcumb-content text-center">
+						<h1 class="mb-4">Services</h1>
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb justify-content-center">
+								<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Services</li>
+							</ol>
+						</nav>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
 	<!--==================================================-->
 	<!-- End breadcumb-area -->
 	<!--==================================================-->
@@ -389,260 +396,211 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="section-title upper">
+					<div class="section-title upper text-center mb-70">
 						<div class="main-title">
-							<h1>Services</h1>
+							<h1 class="text-gradient">OUR SERVICES</h1>
 						</div>
 						<div class="sub-title">
-							<h2>Featured <span>Services</span></h2>
+							<h2 class="display-4">Discover Our <span class="highlight">Expertise</span></h2>
+							<p class="lead">Transforming spaces with innovative design solutions</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row mg-tp">
+			<div class="row g-4">
 				<div class="col-lg-4 col-md-6">
-					<div class="single-inner-service-box wow fadeInLeft">
-						<div class="inner-service-tmb">
-							<img src="assets/images/service/inner-icon-1.png" alt="">
+					<div class="service-card wow fadeInLeft" data-wow-delay="0.2s">
+						<div class="service-icon">
+							<i class="fas fa-drafting-compass fa-3x"></i>
 						</div>
-						<div class="inner-service-title">
-							<h3>Architecture Design</h3>
-							<p>Rapidiously evolve pandemic experiences and end-to-end platforms. Dramatically administrate inexpensive</p>
-						</div>
-						<div class="inner-service-button">
-							<a href="#">View Details</a>
-						</div>
-						<div class="inner-service-number">
-							<h1>01</h1>
+						<div class="service-content">
+							<h3>Architectural Design</h3>
+							<p>Creating innovative and sustainable architectural designs that perfectly balance form and function while meeting your unique requirements.</p>
+							<a href="service-details.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
-					<div class="single-inner-service-box wow fadeInUp">
-						<div class="inner-service-tmb">
-							<img src="assets/images/service/inner-icon-2.png" alt="">
+					<div class="service-card wow fadeInUp" data-wow-delay="0.4s">
+						<div class="service-icon">
+							<i class="fas fa-couch fa-3x"></i>
 						</div>
-						<div class="inner-service-title">
-							<h3>3D Modelling Design</h3>
-							<p>Rapidiously evolve pandemic experiences and end-to-end platforms. Dramatically administrate inexpensive</p>
-						</div>
-						<div class="inner-service-button">
-							<a href="#">View Details</a>
-						</div>
-						<div class="inner-service-number">
-							<h1>02</h1>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-inner-service-box wow fadeInRight">
-						<div class="inner-service-tmb">
-							<img src="assets/images/service/inner-icon-3.png" alt="">
-						</div>
-						<div class="inner-service-title">
-							<h3>Blueprint Design</h3>
-							<p>Rapidiously evolve pandemic experiences and end-to-end platforms. Dramatically administrate inexpensive</p>
-						</div>
-						<div class="inner-service-button">
-							<a href="#">View Details</a>
-						</div>
-						<div class="inner-service-number">
-							<h1>03</h1>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-inner-service-box wow fadeInLeft">
-						<div class="inner-service-tmb">
-							<img src="assets/images/service/inner-icon-4.png" alt="">
-						</div>
-						<div class="inner-service-title">
-							<h3>Industrial Design</h3>
-							<p>Rapidiously evolve pandemic experiences and end-to-end platforms. Dramatically administrate inexpensive</p>
-						</div>
-						<div class="inner-service-button">
-							<a href="#">View Details</a>
-						</div>
-						<div class="inner-service-number">
-							<h1>04</h1>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-inner-service-box wow fadeInUp">
-						<div class="inner-service-tmb">
-							<img src="assets/images/service/inner-icon-5.png" alt="">
-						</div>
-						<div class="inner-service-title">
+						<div class="service-content">
 							<h3>Interior Design</h3>
-							<p>Rapidiously evolve pandemic experiences and end-to-end platforms. Dramatically administrate inexpensive</p>
-						</div>
-						<div class="inner-service-button">
-							<a href="#">View Details</a>
-						</div>
-						<div class="inner-service-number">
-							<h1>05</h1>
+							<p>Crafting elegant and functional interior spaces that reflect your style while maximizing comfort and aesthetic appeal.</p>
+							<a href="service-details.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
-					<div class="single-inner-service-box wow fadeInRight">
-						<div class="inner-service-tmb">
-							<img src="assets/images/service/inner-icon-6.png" alt="">
+					<div class="service-card wow fadeInRight" data-wow-delay="0.6s">
+						<div class="service-icon">
+							<i class="fas fa-chair fa-3x"></i>
 						</div>
-						<div class="inner-service-title">
-							<h3>Furniture Design</h3>
-							<p>Rapidiously evolve pandemic experiences and end-to-end platforms. Dramatically administrate inexpensive</p>
+						<div class="service-content">
+							<h3>Custom Furniture</h3>
+							<p>Designing and crafting bespoke furniture pieces that combine functionality with artistic excellence to enhance your space.</p>
+							<a href="service-details.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
 						</div>
-						<div class="inner-service-button">
-							<a href="#">View Details</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="service-card wow fadeInLeft" data-wow-delay="0.8s">
+						<div class="service-icon">
+							<i class="fas fa-cube fa-3x"></i>
 						</div>
-						<div class="inner-service-number">
-							<h1>06</h1>
+						<div class="service-content">
+							<h3>3D Visualization</h3>
+							<p>Bringing your design concepts to life with photorealistic 3D renderings to help you visualize the final outcome.</p>
+							<a href="service-details.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="service-card wow fadeInUp" data-wow-delay="1s">
+						<div class="service-icon">
+							<i class="fas fa-vector-square fa-3x"></i>
+						</div>
+						<div class="service-content">
+							<h3>Space Planning</h3>
+							<p>Optimizing layout and flow to create efficient and harmonious spaces that enhance both functionality and aesthetics.</p>
+							<a href="service-details.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="service-card wow fadeInRight" data-wow-delay="1.2s">
+						<div class="service-icon">
+							<i class="fas fa-tasks fa-3x"></i>
+						</div>
+						<div class="service-content">
+							<h3>Project Management</h3>
+							<p>Comprehensive oversight of your project from concept to completion, ensuring quality and timely delivery.</p>
+							<a href="service-details.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 	<!--==================================================-->
 	<!-- End service-area-inner-page -->
 	<!--==================================================-->
 
-
 	<!--==================================================-->
-	<!-- Start arcke-agency-area -->
+	<!-- Start call-to-action -->
 	<!--==================================================-->
 
-	<div class="arcke-agency-area">
+	<div class="cta-section bg-gradient py-5 my-5">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="arcke-agency">
-						<h2>Start Your Dream <span>Projects</span> <br> with Takshaga’s Agency</h2>
+			<div class="row align-items-center">
+				<div class="col-lg-8 col-md-7">
+					<div class="cta-content text-white">
+						<h2 class="display-4 mb-3">Ready to Transform Your Space?</h2>
+						<p class="lead mb-0">Let's collaborate to bring your vision to life</p>
 					</div>
-					<div class="arcke-agency-button">
-						<a href="#">Contact Us</a>
-					</div>
+				</div>
+				<div class="col-lg-4 col-md-5 text-md-end">
+					<a href="#" class="btn btn-light btn-lg">Get Started</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	<!--==================================================-->
-	<!-- End arcke-agency-area -->
-	<!--==================================================-->
 
-
+	<!--==================================================-->
+	<!-- End call-to-action -->
+	<!--==================================================-->
 
 	<!--==================================================-->
 	<!-- Start pricing-area -->
 	<!--==================================================-->
 
-	<div class="pricing-area">
+	<div class="pricing-section py-5">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title upper">
-						<div class="main-title">
-							<h1>PRICING PLAN</h1>
-						</div>
-						<div class="sub-title">
-							<h2>Price Table with <span>Featured</span></h2>
-						</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+					<div class="section-title text-center mb-5">
+						<h6 class="text-primary text-uppercase">Pricing Plans</h6>
+						<h2 class="display-5">Choose Your Perfect Package</h2>
+						<p class="lead">Flexible options tailored to your needs</p>
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row g-4">
 				<div class="col-lg-4 col-md-6">
-					<div class="single-pricing-box wow fadeInLeft">
-						<div class="pricing-inner-box">
-							<div class="single-pricing-thumb">
-								<img src="assets/images/pricing/pricing-1.jpg" alt="">
+					<div class="pricing-card wow fadeInLeft">
+						<div class="pricing-header">
+							<h3>Basic Plan</h3>
+							<div class="price">
+								<span class="currency">$</span>
+								<span class="amount">1,499</span>
 							</div>
-							<div class="single-pricing-content">
-								<h3>work Projects</h3>
-								<p>Rapidiously evolve pandemic experien dramatically administrate</p>
-								<div class="pricing-plan-list">
-									<ul>
-										<li>Architecture hourly Rate</li>
-										<li>Combinations</li>
-										<li>Architectural Plans</li>
-										<li>Soil Testing & Repair</li>
-										<li>Engineering Supports</li>
-									</ul>
-								</div>
-								<div class="pricing-dolar">
-									<h3>$45.000</h3>
-								</div>
-								<div class="pricing-button">
-									<a href="#">Place Order</a>
-								</div>
-							</div>
+						</div>
+						<div class="pricing-features">
+							<ul>
+								<li><i class="fas fa-check"></i> Initial Consultation</li>
+								<li><i class="fas fa-check"></i> Basic Design Concepts</li>
+								<li><i class="fas fa-check"></i> 2D Floor Plans</li>
+								<li><i class="fas fa-check"></i> Material Selection</li>
+								<li><i class="fas fa-check"></i> Basic Project Support</li>
+							</ul>
+						</div>
+						<div class="pricing-footer">
+							<a href="#" class="btn btn-outline-primary btn-lg w-100">Get Started</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
-					<div class="single-pricing-box style_two wow fadeInUp">
-						<div class="pricing-inner-box">
-							<div class="single-pricing-thumb">
-								<img src="assets/images/pricing/pricing-2.jpg" alt="">
+					<div class="pricing-card featured wow fadeInUp">
+						<div class="pricing-header">
+							<h3>Professional</h3>
+							<div class="price">
+								<span class="currency">$</span>
+								<span class="amount">2,999</span>
 							</div>
-							<div class="single-pricing-content">
-								<h3>SKETCH WORKS</h3>
-								<p>Rapidiously evolve pandemic experien dramatically administrate</p>
-								<div class="pricing-plan-list">
-									<ul>
-										<li>Architecture hourly Rate</li>
-										<li>Combinations</li>
-										<li>Architectural Plans</li>
-										<li>Soil Testing & Repair</li>
-										<li>Engineering Supports</li>
-									</ul>
-								</div>
-								<div class="pricing-dolar">
-									<h3>$45.000</h3>
-								</div>
-								<div class="pricing-button">
-									<a href="#">Place Order</a>
-								</div>
-							</div>
+						</div>
+						<div class="pricing-features">
+							<ul>
+								<li><i class="fas fa-check"></i> Everything in Basic</li>
+								<li><i class="fas fa-check"></i> 3D Visualizations</li>
+								<li><i class="fas fa-check"></i> Detailed Working Drawings</li>
+								<li><i class="fas fa-check"></i> Custom Furniture Design</li>
+								<li><i class="fas fa-check"></i> Full Project Management</li>
+							</ul>
+						</div>
+						<div class="pricing-footer">
+							<a href="#" class="btn btn-primary btn-lg w-100">Get Started</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
-					<div class="single-pricing-box wow fadeInRight">
-						<div class="pricing-inner-box">
-							<div class="single-pricing-thumb">
-								<img src="assets/images/pricing/pricing-3.jpg" alt="">
+					<div class="pricing-card wow fadeInRight">
+						<div class="pricing-header">
+							<h3>Premium</h3>
+							<div class="price">
+								<span class="currency">$</span>
+								<span class="amount">4,999</span>
 							</div>
-							<div class="single-pricing-content">
-								<h3>DESIGN PROJECT</h3>
-								<p>Rapidiously evolve pandemic experien dramatically administrate</p>
-								<div class="pricing-plan-list">
-									<ul>
-										<li>Architecture hourly Rate</li>
-										<li>Combinations</li>
-										<li>Architectural Plans</li>
-										<li>Soil Testing & Repair</li>
-										<li>Engineering Supports</li>
-									</ul>
-								</div>
-								<div class="pricing-dolar">
-									<h3>$45.000</h3>
-								</div>
-								<div class="pricing-button">
-									<a href="#">Place Order</a>
-								</div>
-							</div>
+						</div>
+						<div class="pricing-features">
+							<ul>
+								<li><i class="fas fa-check"></i> Everything in Professional</li>
+								<li><i class="fas fa-check"></i> VR Experience</li>
+								<li><i class="fas fa-check"></i> Sustainability Planning</li>
+								<li><i class="fas fa-check"></i> Priority Support</li>
+								<li><i class="fas fa-check"></i> Lifetime Consultations</li>
+							</ul>
+						</div>
+						<div class="pricing-footer">
+							<a href="#" class="btn btn-outline-primary btn-lg w-100">Get Started</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 	<!--==================================================-->
 	<!-- End pricing-area -->
 	<!--==================================================-->
