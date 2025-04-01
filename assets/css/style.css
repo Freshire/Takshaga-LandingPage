@@ -2497,6 +2497,12 @@ ul.social-box li a:hover {
 
 .about-area.one .about-thumb img {
     width: 100%;
+    height: auto;
+    max-width: 500px; /* Ensures it doesn't get too large */
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; /* Centers the image */
 }
 
 .about-area.one .about-button {
@@ -7060,80 +7066,61 @@ span.fill {
 
 .blog-area.one .blog-button {
     position: relative;
-    z-index: 1;
-    transition: .5s;
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #D9AA7C, #B37A50); /* Gradient to match theme */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 30px;
     overflow: hidden;
-    transition: .5s;
+    transition: all 0.4s ease-in-out;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .blog-area.one .blog-button a {
-    display: inline-block;
     position: relative;
-    z-index: 1;
-    font-size: 15px;
-    line-height: 32px;
+    display: inline-block;
     color: #ffffff;
-    font-weight: 400;
-    transition: .5s;
-    margin-left: -103px;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
 }
 
 .blog-area.one .blog-button::before {
-    position: absolute;
     content: "";
-    top: 1px;
-    left: 8.5%;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.6s ease-in-out;
     border-radius: 50%;
-    transition: .5s;
+    transform: translate(-50%, -50%) scale(0);
 }
 
-.blog-area.one .blog-button a::before {
-    position: absolute;
-    content: "";
-    top: 16px;
-    right: -60px;
-    height: 1px;
-    width: 46px;
-    background: #fff;
-    z-index: -1;
-    transition: .5s;
+.blog-area.one .blog-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
 }
 
-.blog-area.one .blog-button a::after {
-    position: absolute;
-    content: "";
-    top: 13px;
-    right: -65px;
-    height: 8px;
-    width: 8px;
-    background: #fff;
-    border-radius: 50%;
-    z-index: -1;
+.blog-area.one .blog-button:hover {
+    background: linear-gradient(135deg, #B37A50, #8C5A35); /* Darker gradient on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.blog-area.one .single-blog-box:hover .blog-button::before {
-    left: 33%;
-    border: 1px solid #D9AA7C;
+.blog-area.one .blog-button:hover a {
+    color: #fff;
+    letter-spacing: 1px;
 }
 
-.blog-area.one .single-blog-box:hover .blog-button a::before{
-    background: #D9AA7C;
-}
 
-.blog-area.one .single-blog-box:hover .blog-button a::after{
-    background: #D9AA7C;
-}
-
-.blog-area.one .single-blog-box:hover .blog-button a{
-    margin-left: 0px;
-}
-
-.blog-area.one .single-blog-box:hover .blog-thumb::before{
+.blog-area.one .single-blog-box:hover .blog-thumb::before {
     height: 100%;
 }
+
 
 .blog-area.one .blog-title h3 a:hover{
     color: #D7AB79;
@@ -12224,8 +12211,42 @@ body::-webkit-scrollbar {
     font-weight: bold;
 }
 
+.slider-arrow {
+    margin-top: 20px;
+}
+.arrow-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #D9AA7C;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.arrow-button i {
+    font-size: 20px;
+    color: white;
+}
+.arrow-button:hover {
+    background-color: #B2875B;
+}
 
+/* Tab li Active */
+/* Ensure active tab is highlighted */
+.tabs li.active a {
+    font-weight: bold;
+    color: #D7AB7C; /* Change color as per theme */
+}
 
+/* Hide inactive tab content */
+.tabs_item {
+    display: none;
+}
+
+.tabs_item.active {
+    display: block;
+}
 
 
 
