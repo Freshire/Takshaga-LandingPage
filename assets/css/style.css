@@ -3800,7 +3800,6 @@ span.fill {
 }
 .service-area.one::before {
     position: absolute;
-    content: "";
     left: 0;
     right: 0;
     top: -50px;
@@ -3875,7 +3874,6 @@ span.fill {
 
 .service-area.one .service-button::before {
     position: absolute;
-    content: "";
     top: 63px;
     right: 0;
     width: 25px;
@@ -3901,7 +3899,6 @@ span.fill {
 
 .service-area.one .service-button a::before {
     position: absolute;
-    content: "";
     top: 14px;
     right: -50px;
     height: 1px;
@@ -3913,7 +3910,6 @@ span.fill {
 
 .service-area.one .service-button a::after {
     position: absolute;
-    content: "";
     top: 11px;
     right: -55px;
     height: 8px;
@@ -4062,7 +4058,6 @@ span.fill {
 
 .service_area_five .single_service_box::before {
     position: absolute;
-    content: "";
     top: 0;
     left: 0;
     height: 100%;
@@ -4210,7 +4205,6 @@ span.fill {
 
 .service-area-inner-page .single-inner-service-box::after {
     position: absolute;
-    content: "";
     top: 0;
     left: 0;
     height: 100%;
@@ -4234,7 +4228,6 @@ span.fill {
 
 .service-area-inner-page .inner-service-title h3::before {
     position: absolute;
-    content: "";
     top: 42px;
     left: 0;
     height: 30px;
@@ -4399,7 +4392,6 @@ span.fill {
 
 .service-area-seven .single-service-btn a::before {
     position: absolute;
-    content: "";
     top: 0;
     left: 0;
     height: 100%;
@@ -5126,7 +5118,6 @@ span.fill {
 
 .project-area.one .project-thumb::before {
     position: absolute;
-    content: "";
     left: 0;
     top: 0;
     right: 0;
@@ -5195,7 +5186,6 @@ span.fill {
 
 .project-area.one .project-button::before {
     position: absolute;
-    content: "";
     top: 15px;
     right: 111px;
     width: 25px;
@@ -5220,7 +5210,6 @@ span.fill {
 
 .project-area.one .project-button a::before {
     position: absolute;
-    content: "";
     top: 14px;
     right: -50px;
     height: 1px;
@@ -5232,7 +5221,6 @@ span.fill {
 
 .project-area.one .project-button a::after {
     position: absolute;
-    content: "";
     top: 11px;
     right: -55px;
     height: 8px;
@@ -5275,7 +5263,6 @@ span.fill {
 
 .project-area.one .projects-btn a::after, .projects-btn a::before {
     position: absolute;
-    content: "";
     transform: rotate(0);
     -webkit-transform: rotate(0);
     border: solid;
@@ -5380,7 +5367,6 @@ span.fill {
 
 .project_area_five .single_project_box::before {
     position: absolute;
-    content: "";
     top: 0;
     left: 0;
     height: 100%;
@@ -5571,7 +5557,6 @@ span.fill {
 
 .portfolio_area_three .case-study-content h4::before {
     position: absolute;
-    content: "";
     top: 18px;
     left: -52px;
     height: 2px;
@@ -5609,7 +5594,6 @@ span.fill {
 
 .project_area_five.upper .single_project_box::before {
     position: absolute;
-    content: "";
     top: 0;
     left: 0;
     height: 100%;
