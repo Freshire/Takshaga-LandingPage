@@ -1031,69 +1031,80 @@ ul.social-box li a:hover {
 <!-- Arcke breadcumb Area Css -->
 ==================================================-*/
 
+/* Background styling */
 .breadcumb-area {
-    background: url(../images/exterior/amlcep1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0 110px;
-    height: 450px;
-    position: relative;
-    z-index: 1;
-}
-
-.breadcumb-area .breadcumb-content h1 {
-    font-size: 56px;
-    line-height: 60px;
-    color: #ffffff;
-    font-weight: 700;
-    margin: 0 0 0;
-    text-transform: uppercase;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-}
-
-.breadcumb-content ul {
-    display: inline-block;
-    background: #fff;
-    padding: 12px 10px 12px 23px;
-    position: absolute;
-    right: 10%;
-    bottom: 0;
-}
-
-.breadcumb-content ul li a {
-    display: inline-block;
-    font-size: 14px;
-    line-height: 30px;
-    color: #515151;
-    font-weight: 400;
-    text-transform: uppercase;
     position: relative;
-    z-index: 1;
-    transition: .5s;
 }
 
-.breadcumb-content ul li a::after {
-    position: absolute;
+/* Dark overlay effect */
+.breadcumb-area::before {
     content: "";
-    height: 16px;
-    width: 2px;
-    background: #515151;
-    top: 7px;
-    right: -13px;
-    opacity: 0.5;
-    transform: rotate(29deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
 }
 
-.breadcumb-content ul li {
-    display: inline-block;
-    margin-right: 20px;
-    color: #515151;
-    text-transform: uppercase;
+/* Content styling */
+.breadcumb-content {
+    position: relative;
+    z-index: 2;
 }
 
-.breadcumb-content ul li a:hover {
-    color: #D7AB79;
+.breadcumb-content h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff; /* White text */
+    margin-bottom: 15px;
+}
+
+/* Breadcrumb navigation */
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+/* Breadcrumb links */
+.breadcrumb-item a {
+    color: #f8b400; /* Accent color */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+/* Active breadcrumb */
+.breadcrumb-item.active {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .breadcumb-area {
+        height: 250px;
+    }
+
+    .breadcumb-content h1 {
+        font-size: 32px;
+    }
+
+    .breadcrumb-item a,
+    .breadcrumb-item.active {
+        font-size: 16px;
+    }
 }
 
 /*<!-- ============================================================== -->
@@ -1171,12 +1182,12 @@ ul.social-box li a:hover {
 }
 
 .section-title.upper .main-title h1 {
-    color: #101010;
+    color: rgb(255, 255, 255);
     opacity: 0.051;
 }
 
 .section-title.upper .sub-title h2 {
-    color: #101010;
+    color: wheat;
 }
 
 .section_title .sub_title h4 {
@@ -2211,19 +2222,15 @@ ul.social-box li a:hover {
 }
 .feature-area.one .feature-button::before {
     position: absolute;
-    content: "";
     top: 5px;
     left: 28px;
-    width: 23px;
-    height: 23px;
-    border: 1px solid #fff;
-    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
     transition: .5s;
 }
 
 .feature-area.one .feature-button a::before {
     position: absolute;
-    content: "";
     top: 16px;
     right: -47px;
     height: 1px;
@@ -2235,7 +2242,7 @@ ul.social-box li a:hover {
 
 .feature-area.one .feature-button a::after {
     position: absolute;
-    content: "";
+
     top: 13px;
     right: -53px;
     height: 6px;
@@ -2247,7 +2254,7 @@ ul.social-box li a:hover {
 
 .feature-area.one .single-feature-box:hover .feature-button::before {
     left: 130px;
-    border: 1px solid #D9AA7C;
+    color: #D9AA7C;
 }
 
 .feature-area.one .single-feature-box:hover .feature-button a::before{
@@ -2299,7 +2306,7 @@ ul.social-box li a:hover {
 }
 
 .feature-area.one.upper .feature-button::before {
-    border: 1px solid #101010;
+    color: #101010;
 }
 
 .feature-area.one.upper .feature-button a {
@@ -2497,6 +2504,12 @@ ul.social-box li a:hover {
 
 .about-area.one .about-thumb img {
     width: 100%;
+    height: auto;
+    max-width: 500px; /* Ensures it doesn't get too large */
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; /* Centers the image */
 }
 
 .about-area.one .about-button {
@@ -3787,7 +3800,6 @@ span.fill {
 }
 .service-area.one::before {
     position: absolute;
-    content: "";
     left: 0;
     right: 0;
     top: -50px;
@@ -3862,7 +3874,6 @@ span.fill {
 
 .service-area.one .service-button::before {
     position: absolute;
-    content: "";
     top: 63px;
     right: 0;
     width: 25px;
@@ -3888,7 +3899,6 @@ span.fill {
 
 .service-area.one .service-button a::before {
     position: absolute;
-    content: "";
     top: 14px;
     right: -50px;
     height: 1px;
@@ -3900,7 +3910,6 @@ span.fill {
 
 .service-area.one .service-button a::after {
     position: absolute;
-    content: "";
     top: 11px;
     right: -55px;
     height: 8px;
@@ -4049,7 +4058,6 @@ span.fill {
 
 .service_area_five .single_service_box::before {
     position: absolute;
-    content: "";
     top: 0;
     left: 0;
     height: 100%;
@@ -4163,7 +4171,7 @@ span.fill {
 <!-- ============================================================== -->*/
 
 .service-area-inner-page {
-    background: #F8F8F8;
+    background: #161616;
     padding: 120px 0 90px;
 }
 
@@ -4175,36 +4183,33 @@ span.fill {
     position: relative;
     z-index: 1;
     transition: .5s;
-    background: #fff;
+    background: linear-gradient(45deg, #2a2a2a, #1a1a1a);
     padding: 60px 30px 0px;
     margin-bottom: 30px;
     overflow: hidden;
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .service-area-inner-page .single-inner-service-box::before {
     position: absolute;
-    content: "";
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: url(../images/service/s-box-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: #2a2a2a;
     z-index: -1;
     transition: .9s;
-    transform: scale(0);
+    opacity: 0;
 }
 
 .service-area-inner-page .single-inner-service-box::after {
     position: absolute;
-    content: "";
     top: 0;
     left: 0;
-    height: 0%;
+    height: 100%;
     width: 100%;
-    background: #101010;
+    background: #2a2a2a;
     z-index: -1;
     transition: .9s;
     opacity: 0;
@@ -4213,7 +4218,7 @@ span.fill {
 .service-area-inner-page .inner-service-title h3 {
     font-size: 22px;
     line-height: 40px;
-    color: #101010;
+    color: #a0a0a0;
     font-weight: 500;
     margin: 30px 0 40px;
     position: relative;
@@ -4223,7 +4228,6 @@ span.fill {
 
 .service-area-inner-page .inner-service-title h3::before {
     position: absolute;
-    content: "";
     top: 42px;
     left: 0;
     height: 30px;
@@ -4235,7 +4239,7 @@ span.fill {
 .service-area-inner-page .inner-service-title p {
     font-size: 15px;
     line-height: 28px;
-    color: #515151;
+    color: #a0a0a0;
     font-weight: 400;
     margin: 0 0 0;
     transition: .5s;
@@ -4251,7 +4255,6 @@ span.fill {
 
 .service-area-inner-page .inner-service-button::before {
     position: absolute;
-    content: "";
     top: 4px;
     left: 35%;
     width: 25px;
@@ -4274,7 +4277,6 @@ span.fill {
 
 .service-area-inner-page .inner-service-button a::before {
     position: absolute;
-    content: "";
     top: 16px;
     right: -45px;
     height: 1px;
@@ -4286,7 +4288,6 @@ span.fill {
 
 .service-area-inner-page .inner-service-button a::after {
     position: absolute;
-    content: "";
     top: 13px;
     right: -50px;
     height: 8px;
@@ -4315,7 +4316,7 @@ span.fill {
 }
 
 .service-area-inner-page .inner-service-tmb img {
-    filter: brightness(0.2);
+    filter: brightness(0.5);
     transition: .5s;
 }
 
@@ -4391,7 +4392,6 @@ span.fill {
 
 .service-area-seven .single-service-btn a::before {
     position: absolute;
-    content: "";
     top: 0;
     left: 0;
     height: 100%;
@@ -4540,7 +4540,7 @@ span.fill {
 <!-- ============================================================== -->*/
 
 .arcke-agency-area {
-    background: url(../images/resource/agency.jpg);
+    background: url(../images/exterior/shalet\ final1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -4548,6 +4548,19 @@ span.fill {
     position: relative;
     z-index: 1;
 }
+
+.arcke-agency-area::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Use the same background */
+    filter: blur(8px); /* Apply blur */
+    z-index: -1; /* Send behind content */
+}
+
 
 .arcke-agency-area .arcke-agency h2 {
     font-size: 50px;
@@ -4945,6 +4958,128 @@ span.fill {
 }
 
 /*<!-- ============================================================== -->
+<!-- Design-process-area Css -->
+<!-- ============================================================== -->*/
+.design-process-area {
+    background: #101010;
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.design-process-area .section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.design-process-area .section-title .main-title h1 {
+    font-size: 50px;
+    line-height: 58px;
+    color: #ffffff;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+
+.design-process-area .section-title .sub-title h2 {
+    font-size: 30px;
+    line-height: 40px;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0;
+}
+
+.design-process-area .section-title .sub-title h2 span {
+    color: #D9AB7A;
+}
+
+.design-process-area .single-process-box {
+    background: #161616;
+    padding: 40px 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.design-process-area .single-process-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    background: #2a2a2a;
+}
+
+/* .design-process-area .single-process-box.style_two {
+    background: #D9AB7A;
+} */
+
+.design-process-area .single-process-box.style_two .process-icon i,
+.design-process-area .single-process-box.style_two .process-content h3,
+.design-process-area .single-process-box.style_two .process-content p,
+.design-process-area .single-process-box.style_two .process-steps ul li {
+    color: #ffffff;
+}
+
+.design-process-area .process-inner-box {
+    position: relative;
+    z-index: 1;
+}
+
+.design-process-area .process-icon {
+    margin-bottom: 25px;
+}
+
+.design-process-area .process-icon i {
+    font-size: 40px;
+    color: #D9AB7A;
+    transition: all 0.3s ease;
+}
+
+.design-process-area .single-process-box:hover .process-icon i {
+    transform: scale(1.1);
+}
+
+.design-process-area .process-content h3 {
+    font-size: 24px;
+    line-height: 32px;
+    color: #ffffff;
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+
+.design-process-area .process-content p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #999999;
+    margin: 0 0 20px;
+}
+
+.design-process-area .process-steps ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.design-process-area .process-steps ul li {
+    font-size: 15px;
+    line-height: 30px;
+    color: #999999;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.design-process-area .process-steps ul li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #D9AB7A;
+}
+
+.design-process-area .single-process-box.style_two .process-steps ul li:before {
+    color: #ffffff;
+}
+
+
+/*<!-- ============================================================== -->
 <!-- Arcke project-area Css -->
 <!-- ============================================================== -->*/
 
@@ -4983,7 +5118,6 @@ span.fill {
 
 .project-area.one .project-thumb::before {
     position: absolute;
-    content: "";
     left: 0;
     top: 0;
     right: 0;
@@ -5052,7 +5186,6 @@ span.fill {
 
 .project-area.one .project-button::before {
     position: absolute;
-    content: "";
     top: 15px;
     right: 111px;
     width: 25px;
@@ -5077,7 +5210,6 @@ span.fill {
 
 .project-area.one .project-button a::before {
     position: absolute;
-    content: "";
     top: 14px;
     right: -50px;
     height: 1px;
@@ -5089,7 +5221,6 @@ span.fill {
 
 .project-area.one .project-button a::after {
     position: absolute;
-    content: "";
     top: 11px;
     right: -55px;
     height: 8px;
@@ -5132,7 +5263,6 @@ span.fill {
 
 .project-area.one .projects-btn a::after, .projects-btn a::before {
     position: absolute;
-    content: "";
     transform: rotate(0);
     -webkit-transform: rotate(0);
     border: solid;
@@ -5237,7 +5367,6 @@ span.fill {
 
 .project_area_five .single_project_box::before {
     position: absolute;
-    content: "";
     top: 0;
     left: 0;
     height: 100%;
@@ -5428,7 +5557,6 @@ span.fill {
 
 .portfolio_area_three .case-study-content h4::before {
     position: absolute;
-    content: "";
     top: 18px;
     left: -52px;
     height: 2px;
@@ -5466,7 +5594,6 @@ span.fill {
 
 .project_area_five.upper .single_project_box::before {
     position: absolute;
-    content: "";
     top: 0;
     left: 0;
     height: 100%;
@@ -7060,80 +7187,61 @@ span.fill {
 
 .blog-area.one .blog-button {
     position: relative;
-    z-index: 1;
-    transition: .5s;
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #D9AA7C, #B37A50); /* Gradient to match theme */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 30px;
     overflow: hidden;
-    transition: .5s;
+    transition: all 0.4s ease-in-out;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .blog-area.one .blog-button a {
-    display: inline-block;
     position: relative;
-    z-index: 1;
-    font-size: 15px;
-    line-height: 32px;
+    display: inline-block;
     color: #ffffff;
-    font-weight: 400;
-    transition: .5s;
-    margin-left: -103px;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
 }
 
 .blog-area.one .blog-button::before {
-    position: absolute;
     content: "";
-    top: 1px;
-    left: 8.5%;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.6s ease-in-out;
     border-radius: 50%;
-    transition: .5s;
+    transform: translate(-50%, -50%) scale(0);
 }
 
-.blog-area.one .blog-button a::before {
-    position: absolute;
-    content: "";
-    top: 16px;
-    right: -60px;
-    height: 1px;
-    width: 46px;
-    background: #fff;
-    z-index: -1;
-    transition: .5s;
+.blog-area.one .blog-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
 }
 
-.blog-area.one .blog-button a::after {
-    position: absolute;
-    content: "";
-    top: 13px;
-    right: -65px;
-    height: 8px;
-    width: 8px;
-    background: #fff;
-    border-radius: 50%;
-    z-index: -1;
+.blog-area.one .blog-button:hover {
+    background: linear-gradient(135deg, #B37A50, #8C5A35); /* Darker gradient on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.blog-area.one .single-blog-box:hover .blog-button::before {
-    left: 33%;
-    border: 1px solid #D9AA7C;
+.blog-area.one .blog-button:hover a {
+    color: #fff;
+    letter-spacing: 1px;
 }
 
-.blog-area.one .single-blog-box:hover .blog-button a::before{
-    background: #D9AA7C;
-}
 
-.blog-area.one .single-blog-box:hover .blog-button a::after{
-    background: #D9AA7C;
-}
-
-.blog-area.one .single-blog-box:hover .blog-button a{
-    margin-left: 0px;
-}
-
-.blog-area.one .single-blog-box:hover .blog-thumb::before{
+.blog-area.one .single-blog-box:hover .blog-thumb::before {
     height: 100%;
 }
+
 
 .blog-area.one .blog-title h3 a:hover{
     color: #D7AB79;
@@ -12224,8 +12332,241 @@ body::-webkit-scrollbar {
     font-weight: bold;
 }
 
+.slider-arrow {
+    margin-top: 20px;
+}
+.arrow-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #D9AA7C;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.arrow-button i {
+    font-size: 20px;
+    color: white;
+}
+.arrow-button:hover {
+    background-color: #B2875B;
+}
 
+/* Tab li Active */
+/* Ensure active tab is highlighted */
+.tabs li.active a {
+    font-weight: bold;
+    color: #D7AB7C; /* Change color as per theme */
+}
 
+/* Hide inactive tab content */
+.tabs_item {
+    display: none;
+}
 
+.tabs_item.active {
+    display: block;
+}
+
+/* Additional Data  */
+.additional-details-area {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color for readability */
+    padding: 80px 0; /* Adds spacing */
+    text-align: center; /* Centers text */
+}
+
+.section-title h1,
+.section-title h2 {
+    color: #fff; /* Ensures headings are visible */
+}
+
+.detail-box {
+    background: rgba(255, 255, 255, 0.1); /* Slight transparent background */
+    padding: 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.detail-box:hover {
+    background: rgba(255, 255, 255, 0.2); /* Darker effect on hover */
+}
+
+.detail-icon i {
+    font-size: 50px;
+    color: #f8b400; /* Accent color */
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    opacity: 0.8; /* Slightly dimmed text */
+}
+/* ============================= */
+/* OUR STORY SECTION - ABOUT US  */
+/* ============================= */
+
+/* Background styling for the about section */
+.about-details-area {
+    background-color: #161616; /* Black background */
+    padding: 80px 0; /* Top and bottom padding */
+    text-align: center;
+}
+
+/* Section title styling */
+.section-title h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff; /* White text for contrast */
+}
+
+.section-title h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ddd; /* Light grey for a soft effect */
+}
+
+.section-title h2 span {
+    color: #f8b400; /* Accent color for highlight */
+}
+
+/* Content box styling */
+.about-content {
+    background: #000; /* Dark grey box for slight contrast */
+    padding: 40px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1); /* Soft white glow effect */
+}
+
+/* Paragraph styling */
+.about-content p {
+    font-size: 18px;
+    color: #ccc; /* Light grey text for readability */
+    line-height: 1.8; /* Improves readability */
+    margin-bottom: 20px;
+}
+
+/* Remove extra space at the end */
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 991px) {
+    .about-content {
+        padding: 30px;
+    }
+
+    .section-title h1 {
+        font-size: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+}
+/* ============================= */
+/* OUR IMPACT - STATISTICS AREA  */
+/* ============================= */
+
+/* Background styling for the statistics section */
+.statistics-area {
+    background-color: #000; /* Black background */
+    padding: 80px 0; /* Adds spacing */
+    text-align: center;
+}
+
+/* Section title styling */
+.section-title h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff; /* White text */
+}
+
+.section-title h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ddd; /* Light grey for contrast */
+}
+
+.section-title h2 span {
+    color: #f8b400; /* Accent color */
+}
+
+/* Stats Wrapper */
+.stats-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual stats box */
+.stats-box {
+    background: #111; /* Dark grey background */
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1); /* Soft glow effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.stats-box:hover {
+    transform: translateY(-10px);
+}
+
+/* Stats icon */
+.stats-icon {
+    font-size: 50px;
+    color: #f8b400; /* Accent color */
+    margin-bottom: 15px;
+}
+
+/* Counter number */
+.stats-content h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Stats description */
+.stats-content p {
+    font-size: 18px;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .stats-box {
+        padding: 30px;
+    }
+
+    .section-title h1 {
+        font-size: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .stats-content h2 {
+        font-size: 28px;
+    }
+
+    .stats-content p {
+        font-size: 16px;
+    }
+}
 
 
