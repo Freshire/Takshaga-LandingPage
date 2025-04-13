@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Favicon -->
-	<link rel="icon" type="image/png" sizes="56x56" href="assets/images/takshaga.png">
+	<link rel="icon" type="image/png" sizes="56x56" href="assets/images/takshaga or.png">
 	<!-- bootstrap CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
 	<!-- carousel CSS -->
@@ -63,10 +63,10 @@
 				<div class="col-lg-2">
 					<div class="logo">
 						<a class="logo_img" href="index.html" title="hendre">
-							<img src="assets/images/takshaga.png" alt="Takshaga Logo" style="width: 120px; height: auto;">
+							<img src="assets/images/takshaga or.png" alt="Takshaga Logo" style="width: 100px; height: auto;">
 						</a>
 						<a class="main_sticky" href="index.html" title="hendre">
-							<img src="assets/images/takshaga.png" alt="Takshaga Logo" style="width: 120px; height: auto;">
+							<img src="assets/images/takshaga or.png" alt="Takshaga Logo" style="width: 100px; height: auto;">
 						</a>
 					</div>
 				</div>
@@ -654,15 +654,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="row justify-content-center gap-4">
-				<div class="col-lg-4 col-md-6">
+			<div class="row justify-content-center">
+				<div class="col-lg-3 col-md-6">
 					<div class="single-team-box wow fadeInLeft">
 						<div class="team-thumb">
 							<img src="assets/images/Team1.jpeg" style="height: 450px; width: 100%; object-fit: cover;" alt="">
 						</div>
 						<div class="team-content text-center">
-							<h3>Moris Barbar</h3>
-							<span>Engineer</span>
+							<h3>Saneesh Mon KN</h3>
+							<span>Civil Engineer</span>
 							<div class="team-icon-list">
 								<ul>
 									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -674,14 +674,33 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-3 col-md-6">
 					<div class="single-team-box wow fadeInUp">
 						<div class="team-thumb">
 							<img src="assets/images/Team2.jpeg" style="height: 450px; width: 100%; object-fit: cover;" alt="">
 						</div>
 						<div class="team-content text-center">
-							<h3>Moris Barbar</h3>
-							<span>Engineer</span>
+							<h3>Jinto Jose</h3>
+							<span>Interior Designer</span>
+							<div class="team-icon-list">
+								<ul>
+									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+									<li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="single-team-box wow fadeInUp">
+						<div class="team-thumb">
+							<img src="assets/images/Team2.jpeg" style="height: 450px; width: 100%; object-fit: cover;" alt="">
+						</div>
+						<div class="team-content text-center">
+							<h3>Jinto Jose</h3>
+							<span>Interior Designer</span>
 							<div class="team-icon-list">
 								<ul>
 									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -985,7 +1004,88 @@
 		});
 		</script>
 
+<!-- Mobile Navbar -->
+<div class="takshaga-mobile-menu-container">
+    <div class="takshaga-mobile-menu-bar">
+        <div class="mobile-header-content" style="display: flex; align-items: center; flex-grow: 1;">
+            <img src="assets/images/takshaga or.png" alt="Takshaga Logo" style="width: auto; height: 50px;">
+            <span style="margin-left: 10px; font-weight: 500;">Takshaga</span>
+        </div>
+        <div class="takshaga-menu-toggle">
+            <span class="takshaga-menu-line"></span>
+            <span class="takshaga-menu-line"></span>
+            <span class="takshaga-menu-line"></span>
+        </div>
+        <nav class="takshaga-mobile-nav">
+            <ul class="takshaga-menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="portfolio.html">Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
 
+	<!--==================================================-->
+	<!-- End  Main Menu Area -->
+	<!--==================================================-->
+
+	<script>
+$(document).ready(function() {
+    // Initialize custom mobile menu
+    function initTakshagaMenu() {
+        var $mobileNav = $('.takshaga-mobile-nav');
+        
+        // Toggle mobile menu with slide down effect
+        $('.takshaga-menu-toggle').on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $mobileNav.toggleClass('active');
+            $('body').toggleClass('mobile-menu-open');
+        });
+        
+        // Close menu when clicking on links
+        $mobileNav.on('click', 'a', function() {
+            $('.takshaga-menu-toggle').removeClass('active');
+            $mobileNav.removeClass('active');
+            $('body').removeClass('mobile-menu-open');
+        });
+        
+        // Handle submenus
+        $mobileNav.find('ul ul').each(function() {
+            var $submenu = $(this);
+            $submenu.hide().before(
+                '<button class="takshaga-submenu-toggle"><i class="fas fa-plus"></i></button>'
+            );
+        });
+        
+        $mobileNav.on('click', '.takshaga-submenu-toggle', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            $this.find('i').toggleClass('fa-plus fa-minus');
+            $this.next('ul').slideToggle(300);
+        });
+    }
+    
+    // Initialize menu
+    initTakshagaMenu();
+    
+    // Handle window resize
+    $(window).on('resize', function() {
+        var windowWidth = $(window).width();
+        var $mobileNav = $('.takshaga-mobile-nav');
+        var $menuToggle = $('.takshaga-menu-toggle');
+        
+        if (windowWidth > 991) {
+            $mobileNav.removeClass('active');
+            $menuToggle.removeClass('active');
+            $('body').removeClass('mobile-menu-open');
+        }
+    });
+});
+	</script>
 
 </body>
 

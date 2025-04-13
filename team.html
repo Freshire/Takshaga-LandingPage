@@ -336,7 +336,7 @@
 							<h1>ENGINEERS</h1>
 						</div>
 						<div class="sub-title">
-							<h2>Takshaga’s Expert <span>Engineers</span></h2>
+							<h2>Takshaga's Expert <span>Engineers</span></h2>
 						</div>
 					</div>
 				</div>
@@ -710,24 +710,60 @@
 	<!-- theme js -->
 	<script src="assets/js/theme.js"></script>
 
-
-<script>
-$(document).ready(function(){
-
-$('.aa').counterUp({
-    delay: 10,
-    time: 1000
+	<script>
+$(document).ready(function() {
+    // Initialize custom mobile menu
+    function initTakshagaMenu() {
+        var $mobileNav = $('.takshaga-mobile-nav');
+        
+        // Toggle mobile menu with slide down effect
+        $('.takshaga-menu-toggle').on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $mobileNav.toggleClass('active');
+            $('body').toggleClass('mobile-menu-open');
+        });
+        
+        // Close menu when clicking on links
+        $mobileNav.on('click', 'a', function() {
+            $('.takshaga-menu-toggle').removeClass('active');
+            $mobileNav.removeClass('active');
+            $('body').removeClass('mobile-menu-open');
+        });
+        
+        // Handle submenus
+        $mobileNav.find('ul ul').each(function() {
+            var $submenu = $(this);
+            $submenu.hide().before(
+                '<button class="takshaga-submenu-toggle"><i class="fas fa-plus"></i></button>'
+            );
+        });
+        
+        $mobileNav.on('click', '.takshaga-submenu-toggle', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            $this.find('i').toggleClass('fa-plus fa-minus');
+            $this.next('ul').slideToggle(300);
+        });
+    }
+    
+    // Initialize menu
+    initTakshagaMenu();
+    
+    // Handle window resize
+    $(window).on('resize', function() {
+        var windowWidth = $(window).width();
+        var $mobileNav = $('.takshaga-mobile-nav');
+        var $menuToggle = $('.takshaga-menu-toggle');
+        
+        if (windowWidth > 991) {
+            $mobileNav.removeClass('active');
+            $menuToggle.removeClass('active');
+            $('body').removeClass('mobile-menu-open');
+        }
+    });
 });
-
-
-});
-</script>
-
-
-
-
-
-
+	</script>
 
 </body>
 

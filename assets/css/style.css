@@ -71,11 +71,6 @@ Tags:       architect, architecture, architecture design, architecture portfolio
     display: inline-block;
 }
 
-.top-menu-left h4 i {
-    display: inline-block;
-    margin-right: 5px;
-}
-
 .top-icon-list {
     text-align: right;
 }
@@ -164,7 +159,7 @@ Tags:       architect, architecture, architecture design, architecture portfolio
 }
 
 .hendre_nav_manu.style-two .hendre_menu>ul>li>a {
-    color: #333;
+    color: #333333;
 }
 
 .sticky.hendre_nav_manu.style-two .hendre_menu>ul>li>a {
@@ -11535,7 +11530,7 @@ button.btns:hover::before{
 /*
 <!-- ============================================================== -->
 <!-- hendre Bounce Animation Css -->
-<!-- ============================================================== -->*/
+<!-- ============================================================== */
 /* bounce-animate */
 .bounce-animate {
     animation-name: float-bob;
@@ -12569,4 +12564,322 @@ p {
     }
 }
 
+/* Reset Styles */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
 
+/* Mobile Menu Container */
+.takshaga-mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    z-index: 1000;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mobile Header: Logo + Menu Button */
+.mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo & Brand Name */
+.brand a {
+    display: flex;
+    align-items: center;
+}
+
+.brand img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.brand span {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Menu Toggle Button */
+.menu-toggle-btn {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Navigation Menu */
+.takshaga-nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: black;
+    display: none;
+    padding: 15px 0;
+}
+
+/* Show menu when checkbox is checked */
+#menu-toggle:checked ~ .takshaga-nav {
+    display: block;
+}
+
+/* Navigation Links */
+.takshaga-nav ul {
+    text-align: center;
+}
+
+.takshaga-nav ul li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.takshaga-nav ul li a {
+    font-size: 18px;
+    color: wheat;
+    font-weight: 500;
+    display: block;
+}
+
+.takshaga-nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Submenu */
+.sub-menu {
+    display: none;
+    padding-left: 20px;
+}
+
+#services-toggle {
+    display: none;
+}
+
+.dropdown-label {
+    font-size: 18px;
+    color: wheat;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#services-toggle:checked ~ .sub-menu {
+    display: block;
+}
+
+
+/* Custom header styling */
+.custom-mobile-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    position: relative;
+    min-height: 70px;
+    background-color: black;
+}
+
+.mobile-logo {
+    height: 50px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.custom-mobile-header span {
+    color: white;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+/* MeanMenu reveal button styling */
+.meanmenu-reveal {
+    position: absolute !important;
+    right: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: transparent !important;
+}
+
+.meanmenu-reveal span {
+    display: block !important;
+    width: 24px !important;
+    height: 2px !important;
+    background: white !important;
+    margin: 3px 0 !important;
+}
+
+/* Ensure proper stacking */
+.mean-container .mobile-menu {
+    display: none;
+}
+
+.mean-container .mean-bar {
+    display: block !important;
+}
+/* ================================================== */
+/* Takshaga Mobile Menu - Fixed Slide Down Version */
+/* ================================================== */
+
+/* Mobile Menu Container */
+.takshaga-mobile-menu-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #000;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Mobile Menu Bar */
+.takshaga-mobile-menu-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo and Text */
+.mobile-header-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.mobile-header-content img {
+    height: 50px;
+    width: auto;
+}
+
+.mobile-header-content span {
+    margin-left: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Hamburger Toggle */
+.takshaga-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+.takshaga-menu-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+/* Hamburger Animation */
+.takshaga-menu-toggle.active .takshaga-menu-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.takshaga-menu-toggle.active .takshaga-menu-line:nth-child(2) {
+    opacity: 0;
+}
+
+.takshaga-menu-toggle.active .takshaga-menu-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Navigation */
+.takshaga-mobile-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #000;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    z-index: 9998;
+}
+
+.takshaga-mobile-nav.active {
+    max-height: 100vh;
+}
+
+/* Menu List */
+.takshaga-mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.takshaga-mobile-nav ul li {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.takshaga-mobile-nav ul li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.takshaga-mobile-nav ul li a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Submenu Toggles */
+.takshaga-submenu-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Body Lock */
+body.mobile-menu-open {
+    overflow: hidden;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 991px) {
+    .takshaga-mobile-menu-container {
+        display: flex;
+    }
+    
+    /* Adjust slider position */
+    .hero-slides {
+        margin-top: 80px;
+    }
+}

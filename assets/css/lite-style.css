@@ -393,18 +393,3 @@ body.light-theme {
     background: #565656  !important;
 }
 
-.light-theme .mean-container .mean-bar {
-    background-color: #fff !important;
-}
-
-.light-theme .mean-container .mean-bar::before {
-    color: #10102E !important;
-}
-
-.light-theme .mean-container a.meanmenu-reveal span {
-    background-color: #10102E !important;
-}
-
-.light-theme .mean-container a.meanmenu-reveal {
-    color: #10102E !important;
-}
